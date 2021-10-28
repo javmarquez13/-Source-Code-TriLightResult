@@ -14,9 +14,12 @@ namespace TriLightResult
         [STAThread]
         static void Main()
         {
+            string[] _Args = { "" };
+            _Args = Environment.GetCommandLineArgs(); //Lectura de argumentos de entrada
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(_Args));
         }
     }
 }
